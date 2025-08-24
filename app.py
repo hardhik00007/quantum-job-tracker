@@ -7,6 +7,14 @@ import pandas as pd
 from qiskit import QuantumCircuit, transpile
 from qiskit.circuit.random import random_circuit
 from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2
+import streamlit as st
+
+api_token = st.secrets["IQP_API_TOKEN"]
+instance = st.secrets["IQP_INSTANCE"]
+
+# Example usage
+st.write("API Token:", api_token)
+st.write("Instance:", instance)
 
 # ----------------- CONFIG -----------------
 st.set_page_config(page_title="Quantum Job Tracker", page_icon="🧪", layout="wide")
